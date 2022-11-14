@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@layer components {
+  .custom-input {
+    @apply w-full block px-2 bg-white h-full placeholder-slate-500;
+    @apply border border-slate-300 rounded-xl text-xs shadow-sm;
+    @apply hover:border-slate-200 active:outline-none active:border-none;
+  }
+
+  .custom-input:active{
+    outline: none;
+    border: none;
+  }
+}
+
+/* @media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+} */
